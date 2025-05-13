@@ -1,0 +1,27 @@
+[
+  {
+    "label": "MoveMethod (MM)",
+    "patterns": [
+      [
+        {"LOWER": {"IN": ["move", "moving", "transfer", "transferring"]}},
+        {"IS_ALPHA": true, "OP": "*"},
+        {"LEMMA": "method"}
+      ],
+      [
+        {"LOWER": "pull"},
+        {"LOWER": "up"},
+        {"LEMMA": "method"}
+      ],
+      [
+        {"LOWER": "push"},
+        {"LOWER": "down"},
+        {"LEMMA": "method"}
+      ]
+    ],
+    "risks": [
+      "AM-1", "AM-2", "AM-3", "AM-4",
+      "RM-1", "RM-2", "RM-3", "RM-4", "RM-5",
+      "MM-1"
+    ]
+  }
+]

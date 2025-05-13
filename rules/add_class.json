@@ -1,0 +1,13 @@
+[
+  {
+    "label": "AddClass (AC)",
+    "patterns": [
+      [
+        {"LOWER": {"IN": ["introduce", "introducing", "add", "adding", "create", "creating"]}},
+        {"IS_ALPHA": true, "OP": "*"},
+        {"LEMMA": "class"}
+      ]
+    ],
+    "risks": ["AC-1"]
+  }
+]

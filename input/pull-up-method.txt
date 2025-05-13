@@ -1,0 +1,9 @@
+1. Inspect the methods to ensure they are identical.
+2. If the methods have different signatures, change the signatures to the one you want to use in the superclass.
+3. Create a new method in the superclass, copy the body of one of the methods to it, adjust,
+and compile.
+4. Delete one subclass method.
+5. Compile and test.
+6. Keep deleting subclass methods and testing until only the superclass method remains.
+7. Take a look at the callers of this method to see whether you can change a required type
+to the superclass.

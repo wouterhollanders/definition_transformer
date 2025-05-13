@@ -1,0 +1,29 @@
+[
+    {
+        "label": "AddMethod (AM)",
+        "patterns": [
+            [
+                {"LOWER": {"IN": ["create", "creating", "define", "defining"]}},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LOWER": "new"},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LOWER": "method"}
+            ],
+            [
+                {"LOWER": "copy"},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LEMMA": "method"},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LOWER": "body"}
+            ],
+            [
+                {"LOWER": "copy"},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LOWER": "body"},
+                {"IS_ALPHA": true, "OP": "*"},
+                {"LEMMA": "method"}
+            ]
+        ],
+        "risks": ["AM-1", "AM-2", "AM-3", "AM-4"]
+    }
+]
